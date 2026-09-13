@@ -29,9 +29,9 @@ export default function Home() {
               <a href="#contact" className="text-primary-700 hover:text-accent-500 font-medium transition-colors">Contact</a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="tel:+923337749772" className="hidden md:flex items-center text-accent-600 font-semibold hover:text-accent-700 transition-colors">
+              <a href="tel:03341251254" className="hidden md:flex items-center text-accent-600 font-semibold hover:text-accent-700 transition-colors">
                 <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                <span>0333-7749772</span>
+                <span>0334-1251254</span>
               </a>
               <a href="#hero-form" className="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm md:text-base whitespace-nowrap border border-primary-500">
                 Get Help
@@ -301,7 +301,10 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center mr-4 group-hover:bg-accent-600 transition-colors border border-primary-700">
                     <Phone className="w-4 h-4 text-gold-400 group-hover:text-white" />
                   </div>
-                  <span>Call Us: <a href="tel:+923337749772" className="hover:text-gold-400 transition-colors block font-medium">0333-7749772</a></span>
+                  <span>Call Us: 
+                    <a href="tel:03341251254" className="hover:text-gold-400 transition-colors block font-medium mt-1">0334-1251254</a>
+                    <a href="tel:03180058738" className="hover:text-gold-400 transition-colors block font-medium">0318-0058738</a>
+                  </span>
                 </li>
                 <li className="flex items-start group">
                   <div className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center mr-4 mt-1 flex-shrink-0 group-hover:bg-accent-600 transition-colors border border-primary-700">
@@ -309,7 +312,8 @@ export default function Home() {
                   </div>
                   <span>
                     Visit Us: <br />
-                    <a href="https://share.google/cjPWkqcfdb66sVGLn" target="_blank" rel="noreferrer" className="text-sm text-accent-400 hover:text-gold-400 transition-colors mt-1 inline-block">View on Google Maps &rarr;</a>
+                    <span className="text-primary-100/90 mt-1 mb-2 block font-medium">82 School Rd, Dhok Jumma<br />Rawalpindi, 46000</span>
+                    <a href="https://share.google/cjPWkqcfdb66sVGLn" target="_blank" rel="noreferrer" className="text-sm text-accent-400 hover:text-gold-400 transition-colors inline-block">View on Google Maps &rarr;</a>
                   </span>
                 </li>
               </ul>
