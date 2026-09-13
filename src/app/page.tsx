@@ -1,7 +1,23 @@
+"use client";
+
 import Image from "next/image";
-import { Phone, CheckCircle, ShieldCheck, HeartPulse, UserCheck, MapPin } from "lucide-react";
+import { Phone, CheckCircle, ShieldCheck, HeartPulse, UserCheck, MapPin, MessageCircle } from "lucide-react";
 
 export default function Home() {
+  const handleWhatsAppRedirect = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const phone = formData.get("phone");
+    const service = formData.get("service");
+    
+    const message = `Hello Unique Rehabilitation Center!\n\nI would like to request a callback.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Treatment Needed:* ${service}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/923341251254?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-surface-50 text-primary-900 font-sans transition-colors duration-500">
       {/* Navigation */}
@@ -34,8 +50,8 @@ export default function Home() {
                 <Phone className="w-5 h-5 mr-2 animate-pulse" />
                 <span>0334-1251254</span>
               </a>
-              <a href="#hero-form" className="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm md:text-base whitespace-nowrap border border-primary-500">
-                Get Help
+              <a href="https://wa.me/923341251254" target="_blank" rel="noreferrer" className="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm md:text-base whitespace-nowrap border border-primary-500 flex items-center">
+                <MessageCircle className="w-4 h-4 mr-2" /> Get Help
               </a>
             </div>
           </div>
@@ -75,26 +91,26 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent-500 to-gold-400"></div>
               <h2 className="text-2xl font-bold mb-2 text-center text-primary-900 mt-2">Request a Callback</h2>
               <p className="text-sm text-primary-600 mb-6 text-center">Fill out the form below and our specialists will reach out gently.</p>
-              <form className="space-y-5">
+              <form className="space-y-5" onSubmit={handleWhatsAppRedirect}>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-primary-700 ml-1 mb-1">Full Name</label>
-                  <input type="text" id="name" className="block w-full rounded-xl border-gold-200 shadow-sm focus:border-accent-400 focus:ring-accent-400 bg-surface-50 border p-3 transition-colors outline-none" placeholder="John Doe" />
+                  <input type="text" id="name" name="name" required className="block w-full rounded-xl border-gold-200 shadow-sm focus:border-accent-400 focus:ring-accent-400 bg-surface-50 border p-3 transition-colors outline-none" placeholder="John Doe" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-primary-700 ml-1 mb-1">Phone Number</label>
-                  <input type="tel" id="phone" className="block w-full rounded-xl border-gold-200 shadow-sm focus:border-accent-400 focus:ring-accent-400 bg-surface-50 border p-3 transition-colors outline-none" placeholder="0333 1234567" />
+                  <input type="tel" id="phone" name="phone" required className="block w-full rounded-xl border-gold-200 shadow-sm focus:border-accent-400 focus:ring-accent-400 bg-surface-50 border p-3 transition-colors outline-none" placeholder="0333 1234567" />
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-primary-700 ml-1 mb-1">Treatment Needed</label>
-                  <select id="service" className="block w-full rounded-xl border-gold-200 shadow-sm focus:border-accent-400 focus:ring-accent-400 bg-surface-50 border p-3 transition-colors text-primary-700 outline-none">
+                  <select id="service" name="service" className="block w-full rounded-xl border-gold-200 shadow-sm focus:border-accent-400 focus:ring-accent-400 bg-surface-50 border p-3 transition-colors text-primary-700 outline-none">
                     <option>Drug Rehabilitation</option>
                     <option>Mental Health Counseling</option>
                     <option>Detoxification</option>
                     <option>Not Sure / Other</option>
                   </select>
                 </div>
-                <button type="button" className="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl shadow-md text-base font-medium text-white bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-700 hover:to-accent-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-400 transition-all transform hover:-translate-y-0.5">
-                  Begin Your Journey
+                <button type="submit" className="w-full flex justify-center items-center py-3.5 px-4 border border-transparent rounded-xl shadow-md text-base font-medium text-white bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-700 hover:to-accent-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-400 transition-all transform hover:-translate-y-0.5">
+                  <MessageCircle className="w-5 h-5 mr-2" /> Chat on WhatsApp
                 </button>
                 <p className="text-xs text-primary-400 text-center mt-4 flex items-center justify-center">
                   <ShieldCheck className="w-4 h-4 mr-1 opacity-70" /> 100% Confidential & Secure
@@ -336,7 +352,7 @@ export default function Home() {
               <ul className="space-y-3 font-light">
                 <li><a href="#about" className="hover:text-gold-400 transition-colors flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-accent-500 mr-2"></span>About Us</a></li>
                 <li><a href="#programs" className="hover:text-gold-400 transition-colors flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Our Programs</a></li>
-                <li><a href="#hero-form" className="hover:text-gold-400 transition-colors flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-accent-500 mr-2"></span>Request Callback</a></li>
+                <li><a href="https://wa.me/923341251254" target="_blank" rel="noreferrer" className="hover:text-gold-400 transition-colors flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-accent-500 mr-2"></span>Chat on WhatsApp</a></li>
               </ul>
             </div>
             <div>
