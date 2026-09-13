@@ -1,23 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Premium, Trustworthy & Comforting Palette (Medical / Wellness) */
-  --color-primary-50: #eff6ff; /* Soft medical blue */
-  --color-primary-100: #dbeafe;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-900: #1e3a8a;
+  /* Logo Colors Palette */
+  /* Primary: Deep Purple from the logo figure */
+  --color-primary-50: #f5f3f6;
+  --color-primary-100: #eae5ed;
+  --color-primary-400: #8a738f;
+  --color-primary-500: #5c4461;
+  --color-primary-600: #3b283d;
+  --color-primary-700: #291a2a;
+  --color-primary-900: #1a0f1a;
 
-  --color-accent-50: #fffbeb; /* Warm, comforting sand/amber */
-  --color-accent-100: #fef3c7;
-  --color-accent-400: #fbbf24;
-  --color-accent-500: #f59e0b;
-  --color-accent-600: #d97706;
+  /* Accent: Teal from the logo arcs */
+  --color-accent-50: #f0f9fa;
+  --color-accent-100: #dcf0f2;
+  --color-accent-400: #2fa0ae;
+  --color-accent-500: #0f7682;
+  --color-accent-600: #0a565e;
+  --color-accent-700: #074046;
 
-  --color-surface-50: #f8fafc; /* Clean slate background */
-  --color-surface-100: #f1f5f9;
+  /* Gold: From the inner circle of the logo */
+  --color-gold-50: #fdfaf5;
+  --color-gold-100: #f9f1e1;
+  --color-gold-400: #d6b788;
+  --color-gold-500: #c8a97e;
+  --color-gold-600: #a3855a;
+
+  --color-surface-50: #fafafa;
+  --color-surface-100: #f5f5f5;
 
   /* Custom Animations */
   --animate-calm-gradient: calm-gradient 15s ease infinite;
@@ -54,6 +64,6 @@ body {
 
 /* Background animation class for hero */
 .bg-calm-animated {
-  background: linear-gradient(-45deg, #eff6ff, #f8fafc, #dbeafe, #fffbeb);
+  background: linear-gradient(-45deg, #eae5ed, #fdfaf5, #dcf0f2, #f5f3f6);
   background-size: 400% 400%;
 }
