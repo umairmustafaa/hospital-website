@@ -26,6 +26,7 @@ export default function Home() {
             <div className="hidden lg:flex space-x-8 items-center">
               <a href="#about" className="text-primary-700 hover:text-accent-500 font-medium transition-colors">About</a>
               <a href="#programs" className="text-primary-700 hover:text-accent-500 font-medium transition-colors">Programs</a>
+              <a href="#team" className="text-primary-700 hover:text-accent-500 font-medium transition-colors">Our Team</a>
               <a href="#contact" className="text-primary-700 hover:text-accent-500 font-medium transition-colors">Contact</a>
             </div>
             <div className="flex items-center space-x-4">
@@ -203,8 +204,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Experts Section */}
+      <section id="team" className="py-24 bg-white border-b border-gold-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-gold-500 font-bold tracking-wider uppercase text-sm mb-2 block">Our Experts</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 mb-4">Meet Our Dedicated Team</h2>
+          <p className="text-xl text-primary-600 mb-16 max-w-3xl mx-auto font-light">Overseeing our entire facility, our highly qualified medical professionals are committed to your recovery journey.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Team Member 1 */}
+            <div className="bg-surface-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gold-50 group hover:-translate-y-1">
+              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-primary-50 shadow-sm group-hover:border-accent-100 transition-colors">
+                <span className="text-2xl text-primary-600 font-bold tracking-widest">AM</span>
+              </div>
+              <h3 className="text-xl font-bold text-primary-900 mb-1">Dr. Athar Muneer</h3>
+              <p className="text-accent-600 font-medium mb-4 uppercase tracking-wider text-sm">Psychiatrist</p>
+              <p className="text-primary-700 font-light text-sm leading-relaxed">Providing expert psychiatric evaluation and compassionate mental health care.</p>
+            </div>
+            
+            {/* Team Member 2 */}
+            <div className="bg-surface-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gold-50 group hover:-translate-y-1">
+              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-primary-50 shadow-sm group-hover:border-accent-100 transition-colors">
+                <span className="text-2xl text-primary-600 font-bold tracking-widest">RK</span>
+              </div>
+              <h3 className="text-xl font-bold text-primary-900 mb-1">Dr. Rashid Khan</h3>
+              <p className="text-accent-600 font-medium mb-4 uppercase tracking-wider text-sm">AMO</p>
+              <p className="text-primary-700 font-light text-sm leading-relaxed">Ensuring the highest standards of daily medical operations and patient well-being.</p>
+            </div>
+            
+            {/* Team Member 3 */}
+            <div className="bg-surface-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gold-50 group hover:-translate-y-1">
+              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-primary-50 shadow-sm group-hover:border-accent-100 transition-colors">
+                <span className="text-2xl text-primary-600 font-bold tracking-widest">SM</span>
+              </div>
+              <h3 className="text-xl font-bold text-primary-900 mb-1">Shagufta Mukhtar</h3>
+              <p className="text-accent-600 font-medium mb-4 uppercase tracking-wider text-sm">Psychologist</p>
+              <p className="text-primary-700 font-light text-sm leading-relaxed">Guiding patients through cognitive therapies and personalized emotional support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-surface-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 w-full">
