@@ -215,31 +215,34 @@ export default function Home() {
             {/* Team Member 1 */}
             <div className="bg-surface-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gold-50 group hover:-translate-y-1">
               <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-primary-50 shadow-sm group-hover:border-accent-100 transition-colors">
-                <span className="text-2xl text-primary-600 font-bold tracking-widest">AM</span>
+                <span className="text-2xl text-primary-600 font-bold tracking-widest">SM</span>
               </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-1">Dr. Athar Muneer</h3>
-              <p className="text-accent-600 font-medium mb-4 uppercase tracking-wider text-sm">Psychiatrist</p>
-              <p className="text-primary-700 font-light text-sm leading-relaxed">Providing expert psychiatric evaluation and compassionate mental health care.</p>
+              <h3 className="text-xl font-bold text-primary-900 mb-1">Shagufta Mukhtar</h3>
+              <p className="text-accent-600 font-medium mb-1 uppercase tracking-wider text-sm">Psychologist</p>
+              <p className="text-gold-600 font-semibold mb-4 text-xs tracking-wide uppercase">10 Years Experience</p>
+              <p className="text-primary-700 font-light text-sm leading-relaxed">Guiding patients through cognitive therapies and personalized emotional support.</p>
             </div>
-            
+
             {/* Team Member 2 */}
             <div className="bg-surface-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gold-50 group hover:-translate-y-1">
               <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-primary-50 shadow-sm group-hover:border-accent-100 transition-colors">
-                <span className="text-2xl text-primary-600 font-bold tracking-widest">RK</span>
+                <span className="text-2xl text-primary-600 font-bold tracking-widest">AM</span>
               </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-1">Dr. Rashid Khan</h3>
-              <p className="text-accent-600 font-medium mb-4 uppercase tracking-wider text-sm">AMO</p>
-              <p className="text-primary-700 font-light text-sm leading-relaxed">Ensuring the highest standards of daily medical operations and patient well-being.</p>
+              <h3 className="text-xl font-bold text-primary-900 mb-1">Dr. Athar Muneer</h3>
+              <p className="text-accent-600 font-medium mb-1 uppercase tracking-wider text-sm">Psychiatrist</p>
+              <p className="text-gold-600 font-semibold mb-4 text-xs tracking-wide uppercase">25 Years Experience</p>
+              <p className="text-primary-700 font-light text-sm leading-relaxed">Providing expert psychiatric evaluation and compassionate mental health care.</p>
             </div>
             
             {/* Team Member 3 */}
             <div className="bg-surface-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gold-50 group hover:-translate-y-1">
               <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-primary-50 shadow-sm group-hover:border-accent-100 transition-colors">
-                <span className="text-2xl text-primary-600 font-bold tracking-widest">SM</span>
+                <span className="text-2xl text-primary-600 font-bold tracking-widest">RK</span>
               </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-1">Shagufta Mukhtar</h3>
-              <p className="text-accent-600 font-medium mb-4 uppercase tracking-wider text-sm">Psychologist</p>
-              <p className="text-primary-700 font-light text-sm leading-relaxed">Guiding patients through cognitive therapies and personalized emotional support.</p>
+              <h3 className="text-xl font-bold text-primary-900 mb-1">Dr. Rashid Khan</h3>
+              <p className="text-accent-600 font-medium mb-1 uppercase tracking-wider text-sm">AMO</p>
+              <p className="text-gold-600 font-semibold mb-4 text-xs tracking-wide uppercase">3 Years Experience</p>
+              <p className="text-primary-700 font-light text-sm leading-relaxed">Ensuring the highest standards of daily medical operations and patient well-being.</p>
             </div>
           </div>
         </div>
