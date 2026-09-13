@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Phone, CheckCircle, ShieldCheck, HeartPulse, UserCheck, MapPin, MessageCircle } from "lucide-react";
+import { Phone, CheckCircle, ShieldCheck, HeartPulse, UserCheck, MapPin, MessageCircle, Mail } from "lucide-react";
 
 export default function Home() {
   const handleWhatsAppRedirect = (e: React.FormEvent<HTMLFormElement>) => {
@@ -46,12 +46,15 @@ export default function Home() {
               <a href="#contact" className="text-primary-700 hover:text-accent-500 font-medium transition-colors">Contact</a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="tel:03341251254" className="hidden md:flex items-center text-accent-600 font-semibold hover:text-accent-700 transition-colors">
-                <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                <span>0334-1251254</span>
-              </a>
+              <div className="hidden md:flex flex-col items-end">
+                <span className="text-xs text-accent-500 font-bold uppercase tracking-wider mb-0.5">24/7 Helpline</span>
+                <a href="tel:03341251254" className="flex items-center text-primary-900 font-bold hover:text-accent-600 transition-colors">
+                  <Phone className="w-4 h-4 mr-1.5 text-accent-500 animate-pulse" />
+                  <span>0334-1251254</span>
+                </a>
+              </div>
               <a href="https://wa.me/923341251254" target="_blank" rel="noreferrer" className="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm md:text-base whitespace-nowrap border border-primary-500 flex items-center">
-                <MessageCircle className="w-4 h-4 mr-2" /> Get Help
+                <MessageCircle className="w-4 h-4 mr-2" /> Chat Now
               </a>
             </div>
           </div>
@@ -110,7 +113,7 @@ export default function Home() {
                   </select>
                 </div>
                 <button type="submit" className="w-full flex justify-center items-center py-3.5 px-4 border border-transparent rounded-xl shadow-md text-base font-medium text-white bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-700 hover:to-accent-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-400 transition-all transform hover:-translate-y-0.5">
-                  <MessageCircle className="w-5 h-5 mr-2" /> Chat on WhatsApp
+                  <MessageCircle className="w-5 h-5 mr-2" /> Get Confidential Help
                 </button>
                 <p className="text-xs text-primary-400 text-center mt-4 flex items-center justify-center">
                   <ShieldCheck className="w-4 h-4 mr-1 opacity-70" /> 100% Confidential & Secure
@@ -129,19 +132,19 @@ export default function Home() {
               <span className="text-gold-500 font-bold tracking-wider uppercase text-sm mb-2 block">Our Philosophy</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 mb-6 leading-tight">Healing in a Comforting Environment</h2>
               <p className="text-lg text-primary-700 mb-6 leading-relaxed font-light">
-                We understand that the road to recovery is challenging. At <strong className="font-semibold text-primary-900">Unique Rehabilitation Center</strong>, we offer a serene sanctuary for healing, providing top-tier psychological support in a calming, judgement-free zone.
+                We understand that the road to recovery is challenging for both the patient and their loved ones. At <strong className="font-semibold text-primary-900">Unique Rehabilitation Center</strong>, we offer a secure, respectful sanctuary for healing, providing top-tier psychological support in a calming, stigma-free environment.
               </p>
               <p className="text-lg text-primary-700 mb-8 leading-relaxed font-light">
-                Our approach combines clinical excellence with deep empathy. We tailor our programs to fit your unique needs, ensuring that every patient receives the gentle care necessary for long-term recovery.
+                Our approach combines clinical excellence with deep empathy. We treat your loved ones like our own family, ensuring that every patient receives the gentle, culturally-sensitive care necessary for a full recovery.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start bg-primary-50 p-4 rounded-xl border border-primary-100">
                   <ShieldCheck className="w-6 h-6 text-primary-500 mr-4 mt-0.5 flex-shrink-0" />
-                  <span className="text-primary-800 font-medium">Licensed and compassionate medical professionals.</span>
+                  <span className="text-primary-800 font-medium">Safe, confidential, and highly respectful environment for your family.</span>
                 </li>
                 <li className="flex items-start bg-accent-50 p-4 rounded-xl border border-accent-100">
                   <HeartPulse className="w-6 h-6 text-accent-600 mr-4 mt-0.5 flex-shrink-0" />
-                  <span className="text-primary-800 font-medium">Holistic methodologies focusing on mind, body, and spirit.</span>
+                  <span className="text-primary-800 font-medium">Trusted medical professionals with decades of proven experience.</span>
                 </li>
               </ul>
             </div>
@@ -213,8 +216,8 @@ export default function Home() {
               <div className="w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-500 transition-colors">
                 <HeartPulse className="w-7 h-7 text-accent-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-3">Mindfulness & Yoga</h3>
-              <p className="text-primary-700 font-light leading-relaxed">Holistic practices that focus on connecting mind and body, deeply reducing stress and promoting inner peace.</p>
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Family Counseling</h3>
+              <p className="text-primary-700 font-light leading-relaxed">We guide and support families, helping them understand addiction and how to best support their loved one's recovery.</p>
             </div>
           </div>
         </div>
@@ -281,8 +284,8 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2">
               <span className="text-accent-600 font-bold tracking-wider uppercase text-sm mb-2 block">Why Choose Us</span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 mb-6 leading-tight">A Supportive Community for a Better Future</h2>
-              <p className="text-lg text-primary-600 mb-10 font-light leading-relaxed">We offer more than just treatment; we offer a comforting environment and a pathway to a vibrant, renewed self.</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 mb-6 leading-tight">Trusted Care for Your Loved Ones</h2>
+              <p className="text-lg text-primary-600 mb-10 font-light leading-relaxed">We offer more than just treatment; we offer a safe, respectful environment where your family member can reclaim their life with dignity.</p>
               
               <div className="space-y-8">
                 <div className="flex group">
@@ -304,8 +307,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="ml-6">
-                    <h4 className="text-xl font-bold text-primary-900">Absolute Confidentiality</h4>
-                    <p className="mt-2 text-primary-700 font-light leading-relaxed">Your privacy is our utmost priority. We maintain strict confidentiality protocols to protect your identity and peace of mind.</p>
+                    <h4 className="text-xl font-bold text-primary-900">100% Privacy & Respect</h4>
+                    <p className="mt-2 text-primary-700 font-light leading-relaxed">We understand the importance of your family's dignity. We maintain strict confidentiality protocols to protect your identity and peace of mind.</p>
                   </div>
                 </div>
                 
@@ -362,9 +365,17 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center mr-4 group-hover:bg-accent-600 transition-colors border border-primary-700">
                     <Phone className="w-4 h-4 text-gold-400 group-hover:text-white" />
                   </div>
-                  <span>Call Us: 
+                  <span>Call Us (24/7): 
                     <a href="tel:03341251254" className="hover:text-gold-400 transition-colors block font-medium mt-1">0334-1251254</a>
                     <a href="tel:03180058738" className="hover:text-gold-400 transition-colors block font-medium">0318-0058738</a>
+                  </span>
+                </li>
+                <li className="flex items-center group">
+                  <div className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center mr-4 group-hover:bg-accent-600 transition-colors border border-primary-700">
+                    <Mail className="w-4 h-4 text-gold-400 group-hover:text-white" />
+                  </div>
+                  <span>Email Us: 
+                    <a href="mailto:uniquerehabilitation24@gmail.com" className="hover:text-gold-400 transition-colors block font-medium mt-1">uniquerehabilitation24@gmail.com</a>
                   </span>
                 </li>
                 <li className="flex items-start group">
